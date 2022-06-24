@@ -13,8 +13,18 @@
 	<meta property="og:type" content="website">
 	<meta property="og:image" content="">
 
-	<link href="/bootstrap-5.0.2-dist/css/bootstrap-grid.css" rel="stylesheet">
-	<script src="/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+	<link href="./bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VWF0Q3VV22"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-VWF0Q3VV22');
+    </script>
 
 
 
@@ -133,16 +143,34 @@
 			padding-top: 50px;
 			padding-bottom: 30px;
 		}
+
+		.sec-section {
+			padding-top: 50px;
+			padding-bottom: 10px;
+			color: #fff;
+
+		}
 	</style>
 
 </head>
 <body>
 	<img src="logo_boric.png" alt="boric videogame logo" class="main-logo">
 
-	<canvas id='canvas' class="boric-ql">
+	<canvas id='canvas' class="boric-ql text-center">
 		HTML5 canvas appears to be unsupported in the current browser.<br />
 		Please try updating or use a different browser.
 	</canvas>
+
+	<div class="sec-section">
+		<div class="row">
+			<div class="col-lg-6">
+				Instrucciones
+			</div>
+			<div class="col-lg-6">
+				ScoreBoard
+			</div>
+		</div>
+	</div>
 	<div id='status'>
 		<div id='status-progress' style='display: none;' oncontextmenu='event.preventDefault();'><div id ='status-progress-inner'></div></div>
 		<div id='status-indeterminate' style='display: none;' oncontextmenu='event.preventDefault();'>

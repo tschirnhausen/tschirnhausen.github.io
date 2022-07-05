@@ -3,15 +3,16 @@
 <head>
     <meta charset='utf-8' />
 	<meta name='viewport' content='width=device-width, user-scalable=no' />
-	<link rel='icon' type='image/png' href='fav.png' />
+	<link rel='icon' type='image/png' href='favicon.png' />
 	<title>Renuncia Boric Juego Online</title>
-	<meta name="description" content="Lucha contra los pacíficos manifestantes y aumenta el gasto público de la nación. No dejes que los manifestantes te lastimen o podrías perder tu aprobación.">
+	<meta name="description" content="Juego de Gabriel Boric luchando con manifestantes. No dejes que los manifestantes te lastimen o podrías perder tu aprobación.">
 	<meta property="og:title" content='Renuncia Boric Juego Online'>
 	<meta property="og:site_name" content='Videojuego parodia de Gabriel Boric'>
 	<meta property="og:url" content='www.renunciaboric.cl'>
-	<meta property="og:description" content='Lucha contra los pacíficos manifestantes y aumenta el gasto público de la nación. No dejes que los manifestantes te lastimen o podrías perder tu aprobación.'>
+	<meta property="og:description" content='uego de Gabriel Boric luchando con manifestantes. No dejes que los manifestantes te lastimen o podrías perder tu aprobación..'>
 	<meta property="og:type" content="website">
 	<meta property="og:image" content="https://www.renunciaboric.cl/og_image.png">
+    <meta name="keywords" content="gabriel boric, boric, juego, videojuego, juego boric, juego de boric, juego renuncia boric, juego de renuncia boric, renuncia boric, renuncia, videojuego renuncia, juego renuncia, boric renuncia">
 
 	<link href="./bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
 	<script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
@@ -31,7 +32,7 @@
         .row-container {display: flex; width: 100%; height: 100%; flex-direction: column; background-color: blue; overflow: hidden;}
         .second-row { flex-grow: 1; border: none; margin: 0; padding: 0; }
         .main {
-            margin-top: 10vh;
+            margin-top: 5vh;
             margin-left: 10vw;
             margin-right: 10vw;
             padding: 30px;
@@ -91,6 +92,59 @@
         .home-desc {
             display: none !important;
         }
+
+        .puntajes {
+            color: #fff;
+            margin-top: 5vh;
+        }
+
+        .puntajes table {
+            color: #fff;
+            font-size: 1.5rem;
+        }
+    </style>
+
+    <style>
+        .animate-charcter
+            {
+            text-transform: uppercase;
+            background-image: linear-gradient(
+                -225deg,
+                #B68D2C 0%,
+                #b4891b 29%,
+                #f9db5c 67%,
+                #ffff94 88%,
+                #B68D2C 100%
+            );
+            font-weight: bolder;
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            color: #fff;
+            background-clip: text;
+            text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 2s linear infinite;
+            display: inline-block;
+                font-size: 2rem;
+            }
+
+            @keyframes textclip {
+            to {
+                background-position: 200% center;
+            }
+            }
+
+        .gasto {
+            color: #ffe401;
+            text-shadow: 2px 0 0 #363636, -2px 0 0 #363636, 0 2px 0 #363636, 0 -2px 0 #363636, 1px 1px #363636, -1px -1px 0 #363636, 1px -1px 0 #363636, -1px 1px 0 #363636;
+        }
+
+        .data-puntaje {
+            color: #e5e5e5;
+            text-shadow: 2px 0 0 #363636, -2px 0 0 #363636, 0 2px 0 #363636, 0 -2px 0 #363636, 1px 1px #363636, -1px -1px 0 #363636, 1px -1px 0 #363636, -1px 1px 0 #363636;
+        }
     </style>
 </head>
 
@@ -98,6 +152,23 @@
 
     <section class="main-logo">
         <img src="logo_boric.png" alt="" class="logo-boric">
+    </section>
+
+    <section class="puntajes">
+        <div class="container text-center">
+            <h2 class="animate-charcter">Mejores puntajes</h2>
+            <table class="table table-borderless text-center" style="margin:auto;" id="main-score">
+                <thead>
+                  <tr>
+                    <th scope="col" class="data-puntaje" style="width: 33%">Lugar</th>
+                    <th scope="col" class="data-puntaje" style="width: 33%">Nombre</th>
+                    <th scope="col" class="gasto" style="width: 33%">Gasto público</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
     </section>
 
     <section class="main">
@@ -108,17 +179,18 @@
 
     <section class="secondary">
         <div class="row">
-            <div class="col-lg-4 text-center">
+            <div class="col-lg-6 text-center">
                 <b>¿De qué se trata?</b><br>
-                Lucha contra los pacificos manifestantes y aumenta el gasto público de tu país, pero cuida bien tu aprobación, ya que si llega a 0 ¡Pierdes!
+                Gabriel Boric aumenta el gasto público de la nación en medio de los temores por una recesión a nivel mundial. ¡No dejes que los pacíficos manifestantes te hagan perder tu aprobación! Si llegas a cero, pierdes el juego.
+                <br><br><b>Los mejores 5 puntajes se muestran en la página principal.</b>
+                <br><br><i>hola@renunciaboric.cl</i>
             </div>
-            <div class="col-lg-4 text-center">
-                <b>Comentarios</b><br>
-                Puedes escribir a <b>hola@renunciaboric.cl</b>
-            </div>
-            <div class="col-lg-4 text-center">
-                <b>Mejores puntajes</b>:<br>
-                <i>Próximamente!</i>
+            <div class="col-lg-6 text-center">
+                <b>¡Presiona F para una mejor experiencia! <i>(en computadores)</i></b><br><br>
+                <b>Instrucciones desde celular</b><br>
+                Utiliza los controles en pantalla para <b>golpear</b>, <b>saltar</b> y <b>moverte</b>.<br><br>
+                <b>Instrucciones para computador</b><br>
+                <b>Muévete</b> con las flechas o WASD, <b>golpea</b> con <b>espacio</b> y salta con <b>ctrl</b>.
             </div>
         </div>  
     </section>
@@ -130,10 +202,41 @@
         <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%2496VWHlq8OJkcXOPNUqbLg."+"&opts=16798&num=10&ts=1656096559587");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
         <!-- end www.htmlcommentbox.com -->
     </section>
-
-    <link rel="stylesheet" href="countdown/css/simplyCountdown.theme.custom.css"/>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4048524169705139"
      crossorigin="anonymous"></script>
+
+    <script>
+        var position = 1;
+        var table = document.getElementById("main-score");
+
+        function httpGet(theUrl) {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+            xmlHttp.send( null );
+            return JSON.parse(xmlHttp.responseText);
+        }
+
+        function addScore(score) {
+            var row = table.insertRow(-1);
+
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+
+            cell1.innerHTML = position;
+            cell2.innerHTML = score.guest;
+            cell3.innerHTML = '$' + parseInt(score.score).toLocaleString()
+
+            position += 1;
+
+        }
+
+        var cleanedScores = httpGet('https://api.gamejolt.com/api/game/v1_2/scores/?game_id=730927&limit=10&table_id=740117&signature=1601dde614159589408edee7ef18fcac');
+        var scoresData = cleanedScores.response.scores;
+        var bestScores = scoresData.slice(0, 5);
+        bestScores.forEach(score => addScore(score))
+
+    </script>
 
 </body>
 

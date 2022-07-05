@@ -172,7 +172,7 @@
 
     <section class="puntajes">
         <div class="container text-center">
-            <h2 class="animate-charcter">Mejores puntajes</h2>
+            <h2 class="animate-charcter">Top 100</h2>
             <table class="table table-borderless text-center" style="margin:auto;" id="main-score">
                 <thead>
                   <tr>
@@ -233,6 +233,10 @@
             return JSON.parse(xmlHttp.responseText);
         }
 
+        function cleanName(name) {
+            return name.replace('<', '').replace('>', '').replace('"', '').replace("'", "").replace('=', '').replace('/', '')
+        }
+
         function addScore(score) {
             var row = table.insertRow(-1);
 
@@ -241,7 +245,7 @@
             var cell3 = row.insertCell(2);
 
             cell1.innerHTML = position;
-            cell2.innerHTML = score.guest;
+            cell2.innerHTML = cleanName(score.guest);
             cell3.innerHTML = '$' + parseInt(score.score).toLocaleString()
 
             position += 1;

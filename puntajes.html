@@ -173,43 +173,19 @@
     <section class="puntajes">
         <div class="container text-center">
             <h2 class="animate-charcter">Mejores puntajes</h2>
-            <table class="table table-borderless text-center score-table" style="margin:auto;" id="main-score">
+            <table class="table table-borderless text-center" style="margin:auto;" id="main-score">
                 <thead>
-                    <tr>
-                        <th scope="col" class="data-puntaje" style="width: 33%">Lugar</th>
-                        <th scope="col" class="data-puntaje" style="width: 33%">Nombre</th>
-                        <th scope="col" class="gasto" style="width: 33%">Gasto público</th>
+                  <tr>
+                    <th scope="col" class="data-puntaje" style="width: 33%">Lugar</th>
+                    <th scope="col" class="data-puntaje" style="width: 33%">Nombre</th>
+                    <th scope="col" class="gasto" style="width: 33%">Gasto público</th>
                   </tr>
                 </thead>
                 <tbody>
                 </tbody>
             </table>
-            <a href="./puntajes.html" class="see-all">Ver más</a>
+            <a href="./" class="see-all">< Volver</a>
         </div>
-    </section>
-
-    <section class="main">
-        <div class="row-container">
-            <iframe src="boric.html" title="Boric Videogame" class="second-row"></iframe>
-        </div>  
-    </section>
-
-    <section class="secondary">
-        <div class="row">
-            <div class="col-lg-6 text-center">
-                <h2 class="reg-h2">¿De qué se trata?</h2>
-                Gabriel Boric aumenta el gasto público de la nación en medio de los temores por una recesión a nivel mundial. ¡No dejes que los pacíficos manifestantes te hagan perder tu aprobación! Si llegas a cero, pierdes el juego.
-                <br><br><b>Los mejores 5 puntajes se muestran en la página principal.</b>
-            </div>
-            <div class="col-lg-6 text-center">
-                <h2 class="reg-h2">¡Presiona <b>F</b> para una mejor experiencia!</h2>
-                <br>
-                <b>Instrucciones desde celular</b><br>
-                Utiliza los controles en pantalla para <b>golpear</b>, <b>saltar</b> y <b>moverte</b>.<br><br>
-                <b>Instrucciones para computador</b><br>
-                <b>Muévete</b> con las flechas o WASD, <b>golpea</b> con <b>espacio</b> y salta con <b>ctrl</b>.
-            </div>
-        </div>  
     </section>
 
     <section class="secondary marmol">
@@ -272,9 +248,8 @@
 
         }
 
-        var cleanedScores = httpGet('https://api.gamejolt.com/api/game/v1_2/scores/?game_id=730927&limit=10&table_id=740117&signature=1601dde614159589408edee7ef18fcac');
-        var scoresData = cleanedScores.response.scores;
-        var bestScores = scoresData.slice(0, 5);
+        var cleanedScores = httpGet('https://api.gamejolt.com/api/game/v1_2/scores/?game_id=730927&limit=100&table_id=740117&signature=c5cb21b91d0a390d00c5dca7daa18bd3');
+        var bestScores = cleanedScores.response.scores;
         bestScores.forEach(score => addScore(score))
 
     </script>

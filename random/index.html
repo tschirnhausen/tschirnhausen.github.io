@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="http://cdn.dashjs.org/latest/dash.all.min.js"></script>
+    <script>
+        function init() {
+            const protData = {
+                "org.w3.clearkey": {
+                    "clearkeys": {
+                        "oW5AK5BW43HzbTSKpiu3SQ": "hyN9IKGfWKdAwFaE5pm0qg"
+                    }
+                }
+            };
+            var video,
+                player,
+                url = "https://www.renunciaboric.cl/random/stream.mpd";
+
+            video = document.querySelector("video");
+            player = dashjs.MediaPlayer().create();
+            player.initialize(video, url, true);
+            player.setProtectionData(protData);
+        }
+    </script>
+</head>
+<body>
+<div>
+    <video></video>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        init();
+    });
+</script>
+</body>
+</html>
